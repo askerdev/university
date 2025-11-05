@@ -5,9 +5,10 @@
   set page("a4", footer: align(center)[Москва 2025])
   set text(lang: "ru", size: 14pt, font: "Times New Roman")
 
+
   set par(
     justify: true,
-    spacing: 1em,
+    spacing: 1em - 0.75em,
   )
 
   box(width: 100%, height: 40%)[
@@ -61,11 +62,22 @@
     ),
   )
 
-  set par(spacing: 1.5em)
+  let leading = 1.5em
+  let leading = leading - 0.75em // "Normalization"
+  set block(spacing: leading)
+  set par(spacing: leading, first-line-indent: 1.5cm)
+  set par(leading: leading)
 
   show table: align.with(center)
   show table: text.with(size: 12pt)
-
+  show heading: set text(weight: "regular")
+  show terms.item: it => {
+    block(spacing: 1em)[
+      #text(weight: "regular", it.term)
+      #sym.dash.em
+      #it.description
+    ]
+  }
   set bibliography(style: "gost-r-705-2008-numeric")
 
   doc

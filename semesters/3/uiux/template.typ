@@ -1,14 +1,65 @@
+#let capitalize(str) = {
+  if type(str) == "string" and str.len() > 0 {
+    upper(str.slice(0, 1)) + str.slice(1)
+  } else {
+    str
+  }
+}
+
 #let conf(
   number: none,
+  name: none,
   doc,
 ) = {
-  set page("a4", footer: align(center)[Москва 2025])
-  set text(lang: "ru", size: 14pt, font: "Times New Roman")
+  set page("a4", margin: (left: 30mm, right: 15mm, top: 20mm, bottom: 20mm))
 
+  set text(size: 14pt, lang: "ru", font: "Times New Roman", hyphenate: false)
 
   set par(
-    justify: true,
-    spacing: 1em - 0.75em,
+    justify: false,
+    first-line-indent: (amount: 12.5mm, all: true),
+    leading: 1.5em - 0.75em,
+    spacing: 1.5em,
+  )
+
+  set ref(supplement: none)
+  set figure.caption(separator: " — ")
+  set math.equation(numbering: "(1)")
+
+  show image: set align(center)
+  show figure.where(kind: image): set figure(supplement: [Рисунок])
+
+  show figure.where(kind: table): it => {
+    set block(breakable: true)
+    set figure.caption(position: top)
+    it
+  }
+  show figure.caption.where(kind: table): set align(left)
+  show table.cell: set align(left)
+
+  set list(marker: [–], indent: 12.5mm, spacing: 1em)
+  set enum(indent: 12.5mm, spacing: 1em)
+
+  set page(footer: context [
+    #let page = here().page()
+    #align(center)[#{
+      if page == 1 {
+        [Москва #int(datetime.today().display("[year]"))]
+      } else {
+        grid(
+          columns: (1fr, 1fr, 1fr),
+          align: center,
+          [Хужоков А.Ж. 241-3210], [ЛР #number], [Оптовая продажа рыбы],
+        )
+      }
+    }]
+  ])
+
+  show table: text.with(12pt)
+
+  set bibliography(
+    style: "gost-r-705-2008-numeric",
+    title: [#text(size: 14pt)[Использованные ресурсы и источники]],
   )
 
   box(width: 100%, height: 40%)[
@@ -16,69 +67,41 @@
       Министерство науки и высшего образования Российской Федерации
       #linebreak()
       Федеральное государственное автономное образовательное учреждение высшего образования
-      #parbreak()
+      #linebreak()
       «МОСКОВСКИЙ ПОЛИТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ»
       #linebreak()
-      Факультет информационных технологий
-      #linebreak()
-      Кафедра Инфокогнитивные технологии
-      #linebreak()
-      9.03.01 «Информатика и вычислительная техника»
-      #linebreak()
-      Образовательная программа (профиль) «Веб-технологии»
+      (МОСКОВСКИЙ ПОЛИТЕХ)
     ]
   ]
 
 
   align(center + top)[
-    Лабораторная работа № #number
+    #upper[Лабораторная работа] № #number
     #linebreak()
     По курсу Проектирование пользовательских интерфейсов в веб
+    #linebreak()
+    #text(weight: "semibold")[#name]
   ]
 
   linebreak()
 
-  align(center + top)[
-    Тема
-    #linebreak()
-    Мобильное приложение для группы компаний оптовой продажи рыбной продукции
+  box(width: 100%, height: 20%)[
+    #align(center + top)[
+      #upper[Тема]
+      #linebreak()
+      #text(weight: "bold")[#upper[Мобильное приложение для группы компаний оптовой продажи рыбной продукции]]
+    ]
   ]
 
-  align(right + bottom)[
+  align(right + top)[
     Выполнил: Хужоков А.Ж. 241-3210
     #linebreak()
     Проверил(а): Натур В.В, Пухова Е.А
   ]
 
+  set par(justify: true)
+
   pagebreak()
-
-  set page(
-    "a4",
-    margin: (left: 30mm, right: 15mm, top: 20mm, bottom: 20mm),
-    footer: grid(
-      columns: (1fr, 1fr, 1fr),
-      align: center,
-      [Хужоков А.Ж. 241-3210], [ЛР #number], [Оптовая продажа рыбы],
-    ),
-  )
-
-  let leading = 1.5em
-  let leading = leading - 0.75em // "Normalization"
-  set block(spacing: leading)
-  set par(spacing: leading, first-line-indent: 1.5cm)
-  set par(leading: leading)
-
-  show table: align.with(center)
-  show table: text.with(size: 12pt)
-  show heading: set text(weight: "regular")
-  show terms.item: it => {
-    block(spacing: 1em)[
-      #text(weight: "regular", it.term)
-      #sym.dash.em
-      #it.description
-    ]
-  }
-  set bibliography(style: "gost-r-705-2008-numeric")
 
   doc
 }

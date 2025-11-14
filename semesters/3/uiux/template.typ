@@ -103,5 +103,7 @@
 
   pagebreak()
 
+  show heading: set text(weight: "regular")
+
   doc
 }

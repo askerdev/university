@@ -88,4 +88,7 @@ Octopus.do, XMind, Миро, Flowmapp.
 
 Она помогает верхнеуровнево продумать логику и структуру сайта.
 
-#bibliography("sources.bib", full: true)
+=== Использованные ресурсы и источники
+
++ Задание по Лабораторной работе 3.2.1 [электронный ресурс]. URL: https:// online.mospolytech.ru/mod/assign/view.php?id=302435.
++ app.flowmapp.com [электронный ресурс]. URL: https://app.flowmapp.com/.

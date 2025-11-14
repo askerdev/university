@@ -31,4 +31,6 @@
 
 === Что регламентирует международный стандарт Web Content Accessibility Guidelines (пер. «Руководство по доступности веб-материалов») WCAG
 
-#bibliography("sources.bib", full: true)
+=== Использованные ресурсы и источники
+
++ Задание по Лабораторной работе 6.3.1 [электронный ресурс]. URL: https://online.mospolytech.ru/mod/assign/view.php?id=329501

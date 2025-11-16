@@ -23,7 +23,7 @@
   )
 
   set ref(supplement: none)
-  set figure.caption(separator: " — ")
+  set figure.caption(separator: " - ")
   set math.equation(numbering: "(1)")
 
   show image: set align(center)
@@ -89,7 +89,7 @@
     #align(center + top)[
       #upper[Тема]
       #linebreak()
-      #text(weight: "bold")[#upper[Мобильное приложение для группы компаний оптовой продажи рыбной продукции]]
+      #text(weight: "bold")[#upper[Сайт для группы компаний оптовой продажи рыбной продукции]]
     ]
   ]
 

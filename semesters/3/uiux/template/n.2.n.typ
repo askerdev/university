@@ -12,4 +12,6 @@
 
 == Контрольные вопросы и ответы
 
-#bibliography("sources.bib", full: true)
+=== Использованные ресурсы и источники
+
++ Задание по Лабораторной работе n.2.n [электронный ресурс]. URL: https://online.mospolytech.ru/mod/assign/view.php?id=302452

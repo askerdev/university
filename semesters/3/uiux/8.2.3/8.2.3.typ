@@ -80,9 +80,18 @@
 ) <grid>
 
 #figure(
-  rect(image("assets/fonts.png", width: 100%, height: 30%, fit: "contain")),
+  rect(image("assets/fonts.png", width: 100%, height: 50%, fit: "contain")),
   caption: [Выбранная пара шрифтов],
 ) <fonts>
+
+
+=== Цветовая палитра
+На рисунке @colors показана выбранная цветовая палитра сайта.
+
+#figure(
+  rect(image("assets/colors.png", width: 100%, height: 30%, fit: "contain")),
+  caption: [Выбранная цветовая палитра],
+) <colors>
 
 === Гайдлайны интерфейса iOS (Human Interface Guidelines)
 

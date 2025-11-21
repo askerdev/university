@@ -140,9 +140,30 @@
 На риснуке @fonts-contrast изображена контрастность синего цвета на белом фоне, основном цвете фона сайта.
 
 #figure(
-  rect(image("assets/fonts-contrast.png", width: 100%, height: 30%, fit: "contain")),
+  rect(image("assets/fonts-contrast.png", width: 100%, height: 40%, fit: "contain")),
   caption: [Контрастность синего цвета на фоне белого],
 ) <fonts-contrast>
+
+На риснуке @fontjoy изображена оценка сочитаемости выбранных шрифтов.
+
+#figure(
+  rect(image("assets/fontjoy.png", width: 100%, height: 30%, fit: "contain")),
+  caption: [Сочитаемость выбранных шрифтов],
+) <fontjoy>
+
+На рисунке @mixfont-1 изображена сочетаемость выбранных шрифтов на сервисе Mixfont
+
+#figure(
+  rect(image("assets/mixfont-1.png", width: 100%, height: 50%, fit: "contain")),
+  caption: [Mixfont, первый пример],
+) <mixfont-1>
+
+На рисунке @mixfont-2 изображена сочетаемость выбранных шрифтов на сервисе Mixfont, второй пример
+
+#figure(
+  rect(image("assets/mixfont-2.png", width: 100%, height: 30%, fit: "contain")),
+  caption: [Mixfont, второй пример],
+) <mixfont-2>
 
 == Контрольные вопросы и ответы
 

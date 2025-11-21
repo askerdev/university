@@ -23,7 +23,7 @@
   )
 
   set ref(supplement: none)
-  set figure.caption(separator: " - ")
+  set figure.caption(separator: [ -- ])
   set math.equation(numbering: "(1)")
 
   show image: set align(center)
@@ -100,6 +100,7 @@
   ]
 
   set par(justify: true)
+  show heading: set text(size: 14pt)
 
   pagebreak()
 

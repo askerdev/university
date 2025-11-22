@@ -105,6 +105,7 @@
   pagebreak()
 
   show heading: set text(weight: "regular")
+  show table: set par(justify: false)
 
   doc
 }

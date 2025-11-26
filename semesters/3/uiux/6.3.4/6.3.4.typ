@@ -53,16 +53,11 @@
 На рисунке @icefish-lighthouse показан результат теста Lighthouse для сайта icefish.
 
 #figure(
-  rect(image("assets/icefish-lighthouse.png", height: 50%, fit: "contain")),
+  rect(image("assets/icefish-lighthouse.png", height: 30%, fit: "contain")),
   caption: [Результат теста Lighthouse для сайта icefish],
 ) <icefish-lighthouse>
 
-На рисунке @icefish-recommendations показаны рекомандации Lighthouse по улучшению производительности icefish.
-
-#figure(
-  rect(image("assets/icefish-recommendations.png", height: 40%, fit: "contain")),
-  caption: [Рекомандации Lighthouse по улучшению производительности icefish],
-) <icefish-recommendations>
+Производительность: Largest Contentful Paint, Serve images in next-gen formats, Defer offscreen images
 
 На рисунке @magfish-lighthouse показан результат теста Lighthouse для сайта magfish.
 
@@ -71,12 +66,7 @@
   caption: [Результат теста Lighthouse для сайта magfish],
 ) <magfish-lighthouse>
 
-На рисунке @magfish-recommendations показаны рекомандации Lighthouse по улучшению производительности magfish.
-
-#figure(
-  rect(image("assets/magfish-recommendations.png", height: 40%, fit: "contain")),
-  caption: [Рекомандации Lighthouse по улучшению производительности magfish],
-) <magfish-recommendations>
+Производительность: Serve images in next-gen formats, Defer offscreen images, Properly size images
 
 На рисунке @rybka-opt-lighthouse показан результат теста Lighthouse для сайта rybka-opt.
 
@@ -85,12 +75,7 @@
   caption: [Результат теста Lighthouse для сайта rybka-opt],
 ) <rybka-opt-lighthouse>
 
-На рисунке @rybka-opt-recommendations показаны рекомандации Lighthouse по улучшению производительности rybka-opt.
-
-#figure(
-  rect(image("assets/rybka-opt-recommendations.png", height: 40%, fit: "contain")),
-  caption: [Рекомандации Lighthouse по улучшению производительности rybka-opt],
-) <rybka-opt-recommendations>
+Производительность: Serve images in next-gen formats, Defer offscreen images, Image elements do not have explicit width and height
 
 На рисунке @ribnaya-baza-lighthouse показан результат теста Lighthouse для сайта ribnaya-baza.
 
@@ -99,12 +84,7 @@
   caption: [Результат теста Lighthouse для сайта ribnaya-baza],
 ) <ribnaya-baza-lighthouse>
 
-На рисунке @ribnaya-baza-recommendations показаны рекомандации Lighthouse по улучшению производительности ribnaya-baza.
-
-#figure(
-  rect(image("assets/ribnaya-baza-recommendations.png", height: 40%, fit: "contain")),
-  caption: [Рекомандации Lighthouse по улучшению производительности ribnaya-baza],
-) <ribnaya-baza-recommendations>
+Производительность: Serve images in next-gen formats, Defer offscreen images, Image elements do not have explicit width and height
 
 На рисунке @ekorfish-lighthouse показан результат теста Lighthouse для сайта ekorfish.
 
@@ -113,12 +93,7 @@
   caption: [Результат теста Lighthouse для сайта ekorfish],
 ) <ekorfish-lighthouse>
 
-На рисунке @ekorfish-recommendations показаны рекомандации Lighthouse по улучшению производительности ekorfish.
-
-#figure(
-  rect(image("assets/ekorfish-recommendations.png", height: 40%, fit: "contain")),
-  caption: [Рекомандации Lighthouse по улучшению производительности ekorfish],
-) <ekorfish-recommendations>
+Производительность: Largest Contentful Paint, Serve images in next-gen formats, Defer offscreen images
 
 В таблице @lighthouse-table отображены сводные данные по анализу производительности сайтов аналогов.
 
